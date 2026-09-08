@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 800);
 }
 
 function draw() {
@@ -14,4 +14,8 @@ function draw() {
   circle(70,170,40);
   fill("grey")
   rect (60,200,20,120);
+  fill("nofill");
+  fill("black")
+  textSize(20);
+  text ("5", 20, 50);
 }

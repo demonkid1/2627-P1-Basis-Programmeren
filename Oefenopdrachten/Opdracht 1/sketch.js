@@ -9,10 +9,10 @@ function draw() {
   rect(4,4,600,400);
   rect(4,4,450,50);
   fill("blue");
-  rect(4,4,200,50);
+  rect(4,4,250,50);
   fill("nofill");
-  rect(200,4,50,50);
-  rect(250,4,50,50);
+  rect(204,4,50,50);
+  rect(250,4,54,50);
   fill("red");
   rect(450,4,154,50);
   fill("yellow");
@@ -24,7 +24,7 @@ function draw() {
   fill("blue");
   rect(4,354,300,50);
   fill("red");
-  rect(104,200,100,100);
+  rect(104,154,100,100);
   fill("yellow");
   rect(204,54,100,300);
   fill("red");

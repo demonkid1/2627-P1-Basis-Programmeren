@@ -25,6 +25,7 @@ function draw() {
   text ("3", 130, 240);
   text ("6", 130, 450);
   text ("4", 300, 600);
+  text ("7  Mario", 350, 200)
 // flag
   fill ("white");
   rect (150,110,100,25);

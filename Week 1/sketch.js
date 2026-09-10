@@ -27,6 +27,8 @@ function draw() {
   text ("4", 300, 600);
   text ("7  Mario", 350, 200)
   text ("8  CHARMANDER!!!!!!!!!!", 1000, 250)
+  text("9 Laptop/coderen", 100,950)
+  text("10  logo", 1000,950)
 // flag
   fill ("white");
   rect (150,110,100,25);
@@ -190,6 +192,30 @@ rect(1450,600, 25,25);
 rect(1325,675, 25,25);
 rect(1275,675, 25,25);
 
+//Belangrijkste tijd van me dag/coderen 3 star
+strokeWeight(2)
+fill("darkgrey")
+rect(95,995, 210, 110)
+fill("black")
+rect(100,1000, 200, 100)
+rect(100,1110, 200,10)
+
+fill("lightgreen")
+textSize(11)
+text("01001000 01100101 01101100 01101100", 100, 1020)
+text("01101111 00100000 01010111 01101111", 100, 1040)
+text("01110010 01101100 01100100 00100001", 100, 1060)
+
+//extra opdrach 2 2 star
+fill("darkblue")
+circle(1050,1050, 125)
+rect(1000,1000, 100,100)
+
+fill("red")
+textSize(100)
+text("C", 1010,1085)
+textSize(115)
+text("L", 1025,1090)
 
 
 }

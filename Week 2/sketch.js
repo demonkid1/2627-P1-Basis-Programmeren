@@ -1,5 +1,7 @@
-let carSP1 = 100
-
+let carSP1 = 0
+let carSP2 = -500
+let carSP3 = -700
+let sunSP = 20
 
 function setup() {
   createCanvas(800, 600);
@@ -8,8 +10,21 @@ function setup() {
 function draw() {
   background("lightblue");
   //variablelen
-carSP1 = carSP1 + 1
-
+  carSP1 = carSP1 + 3
+  carSP2 = carSP2 + 3
+  carSP3 = carSP3 + 3
+  sunSP = sunSP + 2
+  text(carSP2, 10, 10)
+  //logic
+  if (carSP1 >= 800) {
+    carSP1 = -100
+  }
+  if (carSP2 >= 800) {
+    carSP2 = -100
+  }
+  if (carSP3 >= 800) {
+    carSP3 = -100
+  }
   //zon
   fill('yellow')
   circle(100, 100 + 50, 50)
@@ -45,22 +60,22 @@ carSP1 = carSP1 + 1
   //auto rood
   fill("grey")
   circle(carSP1, 530, 20)
-  circle(50+carSP1, 530, 20)
+  circle(50 + carSP1, 530, 20)
   fill("red")
-  rect(carSP1-10, 500, 90, 25)
-  rect(carSP1-10, 485, 70, 25)
+  rect(carSP1 - 10, 500, 90, 25)
+  rect(carSP1 - 10, 485, 70, 25)
   //auto licht groen
   fill("grey")
-  circle(100, 530, 20)
-  circle(150, 530, 20)
+  circle(carSP3, 530, 20)
+  circle(carSP3 + 50, 530, 20)
   fill("lightgreen")
-  rect(90, 500, 90, 25)
-  rect(90, 485, 70, 25)
+  rect(carSP3 - 10, 500, 90, 25)
+  rect(carSP3 - 10, 485, 70, 25)
   //auto blauw
   fill("grey")
-  circle(100, 530, 20)
-  circle(150, 530, 20)
+  circle(carSP2, 530, 20)
+  circle(carSP2 + 50, 530, 20)
   fill("blue")
-  rect(90, 500, 90, 25)
-  rect(90, 485, 70, 25)
+  rect(carSP2 - 10, 500, 90, 25)
+  rect(carSP2 - 10, 485, 70, 25)
 }

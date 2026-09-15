@@ -4,11 +4,16 @@ function setup() {
 
 function draw() {
   background("lightblue");
+  //variablelen
+  let Y = 1
+  let ZonSp = 50 + Y
+  //zon
+  circle (50, ZonSp, 50)
   //bergen
   strokeWeight (0)
   fill("grey")
-  triangle (0,500, 250, 20, 500, 500)
-  triangle (450,500, 750, 20, 1000, 500)
+  triangle (0,500, 250, 100, 500, 500)
+  triangle (450,500, 750, 125, 1000, 500)
 //auto weg
   fill ("black");
   rect (0,500,800,100);

@@ -1,3 +1,6 @@
+let carSP1 = 100
+
+
 function setup() {
   createCanvas(800, 600);
 }
@@ -5,7 +8,7 @@ function setup() {
 function draw() {
   background("lightblue");
   //variablelen
-
+carSP1 = carSP1 + 1
 
   //zon
   fill('yellow')
@@ -41,11 +44,11 @@ function draw() {
 
   //auto rood
   fill("grey")
-  circle(100, 530, 20)
-  circle(150, 530, 20)
+  circle(carSP1, 530, 20)
+  circle(50+carSP1, 530, 20)
   fill("red")
-  rect(90, 500, 90, 25)
-  rect(90, 485, 70, 25)
+  rect(carSP1-10, 500, 90, 25)
+  rect(carSP1-10, 485, 70, 25)
   //auto licht groen
   fill("grey")
   circle(100, 530, 20)

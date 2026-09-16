@@ -1,6 +1,5 @@
 let counter = 0
-let LightC = 0
-let LightCA = 0
+
 
 
 function setup() {
@@ -20,7 +19,7 @@ counter = counter + 1
   text ("Druk op enter om van rood -> groen -> oranje te gaan.", 20,240)
   text ("Beweeg de eightball met WASD of de pijltjestoetsen.", 360,20)
 
-  text (LightCA, 20,140)
+  text (counter, 20,140)
   fill("grey")
   rect(20,250, 50,150)
   fill("red")

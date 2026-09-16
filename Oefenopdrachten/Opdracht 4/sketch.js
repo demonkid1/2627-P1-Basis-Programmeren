@@ -37,6 +37,7 @@ wait = wait + 1
   text ("Beweeg de eightball met WASD of de pijltjestoetsen.", 360,20)
   /strokeWeight(2)
   textSize(100)
+  //counter
   text (counter, 20,210)
   //stoplight base
   fill("grey")
@@ -145,6 +146,16 @@ if (keyIsPressed && wait >= 15){
   if (keyIsPressed == true){
     if(keyCode == 40)
       Y += 1
+  }
+  if (Y == 654){
+    Y = -52
+  } else if (Y == -53){
+    Y = 653
+  }
+  if ( X == -53){
+    X = 1051
+  } else if (X >= 1053){
+    X = -51
   }
 }
 

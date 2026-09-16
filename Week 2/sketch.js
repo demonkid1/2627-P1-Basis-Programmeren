@@ -9,6 +9,7 @@ function setup() {
 
 function draw() {
   background("lightblue");
+  text(mouseX +" "+ mouseY, 100,100)
   //variablelen
   carSP1 = carSP1 + 3
   carSP2 = carSP2 + 3

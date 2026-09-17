@@ -158,7 +158,3 @@ if (keyIsPressed && wait >= 15){
     X = -51
   }
 }
-
-
-
-

@@ -27,6 +27,10 @@ function draw() {
   if (carSP3 >= 800) {
     carSP3 = -100
   }
+
+
+
+  
   //zon
   fill('yellow')
   circle(100, 100 + 50, 50)
@@ -81,8 +85,12 @@ function draw() {
   rect(carSP2 - 10, 500, 90, 25)
   rect(carSP2 - 10, 485, 70, 25)
 
-  
-  //logic
+  fill("darkgrey")
+  rect(710, 270, 72, 155)
+  rect(725,)
+
+
+  //logic light
   if (keyIsPressed && wait >= 15){
   if (keyCode == ENTER){
     D = D + 1
@@ -92,18 +100,18 @@ function draw() {
   if (D == 1){
     strokeWeight(2)
       fill("red")
-      circle (45,275, 40)
+      circle (745,300, 40)
   } else if (D == 2){
     strokeWeight(2)
     fill("orange")
-    circle (45,325, 40)
+    circle (745,350, 40)
       carSP1 = carSP1 + 1
       carSP2 = carSP2 + 1
       carSP3 = carSP3 + 1
   } else if (D == 3){
     strokeWeight(2)
     fill("green")
-    circle (45,375, 40)
+    circle (745,400, 40)
       carSP1 = carSP1 + 3
       carSP2 = carSP2 + 3
       carSP3 = carSP3 + 3

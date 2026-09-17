@@ -26,7 +26,7 @@ function draw() {
   background(220);
 
 //variabelen
-counter = counter + 1
+
 wait = wait + 1
   //text
   textSize(14)
@@ -69,7 +69,7 @@ wait = wait + 1
     fill ("grey")
   rect (20,40, 60,60)
   }
-  if (keyCode === 66) { 
+  if (keyCode === 66) {
     strokeWeight(5)
     fill ("grey")
     rect (20,40, 60,60)

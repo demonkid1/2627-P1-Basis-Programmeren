@@ -6,6 +6,7 @@ let D = 1;
 let wait = 0
 let moonSP = -50
 let SkyColor = "lightblue"
+let cloudSP = 0
 
 function setup() {
   createCanvas(800, 600);
@@ -14,30 +15,33 @@ function setup() {
 function draw() {
   background(SkyColor);
   fill("black")
-  text(mouseX +" "+ mouseY, 100,100)
+
   //variablelen
-  
-  sunSP = sunSP + 1
+  cloudSP = cloudSP + 1 * -1
+  sunSP = sunSP + 0.75
   wait = wait + 1
-  text(moonSP, 10, 10)
+  
   //logic car
-  if (carSP1 >= 800) {
+  if (carSP1 >= 820) {
     carSP1 = -100
   }
-  if (carSP2 >= 800) {
+  if (carSP2 >= 820) {
     carSP2 = -100
   }
-  if (carSP3 >= 800) {
+  if (carSP3 >= 820) {
     carSP3 = -100
   //logic day/night
   } if(sunSP >= 825){
-    moonSP = moonSP + 1
+    moonSP = moonSP + 0.75
     SkyColor = "black"
   } 
   if(moonSP >= 825){
     sunSP = -50  
     moonSP = -50
     SkyColor = "lightblue"
+  }
+  if (cloudSP <= -100){
+    cloudSP = 900
   }
 
 
@@ -54,6 +58,13 @@ function draw() {
   fill("grey")
   triangle(0, 500, 250, 100, 500, 500)
   triangle(450, 500, 750, 125, 1000, 500)
+
+  //cloud
+    fill("#E5E4E2")
+    circle(cloudSP-50,100,50)
+    circle(cloudSP-75,100,50)
+    circle(cloudSP-65,75,50)
+    circle(cloudSP-85,80,50)
 
   //grass
   fill("green")

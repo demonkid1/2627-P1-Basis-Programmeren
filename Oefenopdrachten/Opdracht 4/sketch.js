@@ -1,19 +1,37 @@
 let counter = 0
 let A = 'yes';
 let D = 1;
-let wait = 0
-let Y = 120
-let X = 380
+let wait = 0;
+let Y = 120;
+let X = 380;
+let a;
+let b;
+
 
 function setup() {
   createCanvas(1000, 600);
 
 }
 function keyPressed(){
-  if (keyCode === 87)
-    console.log("W wordt ingedrukt")
-  if (keyCode === 83)
-    console.log("S wordt ingedrukt")
+  // if (keyCode === 87)
+  //   console.log("W wordt ingedrukt")
+  // if (keyCode === 83)
+  //   console.log("S wordt ingedrukt")
+
+    if (keyIsPressed){
+    if (keyCode == 32){
+      a = floor(random(0, 101))
+      b = floor(random(0, 101))
+
+
+
+    }
+    }
+
+
+
+
+
 }
 
 function keyReleased(){
@@ -26,7 +44,7 @@ function draw() {
   background(220);
 
 //variabelen
-
+counter = counter +1
 wait = wait + 1
   //text
   textSize(14)
@@ -38,7 +56,7 @@ wait = wait + 1
   /strokeWeight(2)
   textSize(100)
   //counter
-  text (D, 20,210)
+  text (counter, 20,210)
   //stoplight base
   fill("grey")
   rect(20,250, 50,150)
@@ -63,6 +81,19 @@ wait = wait + 1
 
 
   //logic
+     if(a <= b){
+      text(a+" is kleiner dan "+b, 300,300)
+     }
+     if(a >= b){
+      text(a +" is groter dan " + b, 300,300)
+     }
+     if(a == b){
+      text("ze zijn gelijk", 300,300)
+     }
+
+
+
+
   if (keyIsPressed){
     if (key === 'b') {
     strokeWeight(5)

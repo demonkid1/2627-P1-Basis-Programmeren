@@ -4,6 +4,7 @@ let carSP3 = -700
 let sunSP = 20
 let D = 1;
 let wait = 0
+let moonSP = -50
 
 function setup() {
   createCanvas(800, 600);
@@ -13,10 +14,10 @@ function draw() {
   background("lightblue");
   text(mouseX +" "+ mouseY, 100,100)
   //variablelen
-
-  sunSP = sunSP + 2
+  
+  sunSP = sunSP + 1
   wait = wait + 1
-  text(carSP2, 10, 10)
+  text(moonSP, 10, 10)
   //logic
   if (carSP1 >= 800) {
     carSP1 = -100
@@ -26,14 +27,20 @@ function draw() {
   }
   if (carSP3 >= 800) {
     carSP3 = -100
+  } if(sunSP >= 800){
+    moonSP = -50
+  } else if(moonSP <= 800 && sunSP >= 800){
+    moonSP = moonSP + 1
   }
 
 
-
+  //moon
+  fill("white")
+  circle(moonSP, 25 + 50, 50)
   
   //zon
   fill('yellow')
-  circle(100, 100 + 50, 50)
+  circle(sunSP, 25 + 50, 50)
 
   //bergen
   strokeWeight(0)

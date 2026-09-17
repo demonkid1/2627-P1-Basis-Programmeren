@@ -5,20 +5,22 @@ let sunSP = 20
 let D = 1;
 let wait = 0
 let moonSP = -50
+let SkyColor = "lightblue"
 
 function setup() {
   createCanvas(800, 600);
 }
 
 function draw() {
-  background("lightblue");
+  background(SkyColor);
+  fill("black")
   text(mouseX +" "+ mouseY, 100,100)
   //variablelen
   
   sunSP = sunSP + 1
   wait = wait + 1
   text(moonSP, 10, 10)
-  //logic
+  //logic car
   if (carSP1 >= 800) {
     carSP1 = -100
   }
@@ -27,10 +29,15 @@ function draw() {
   }
   if (carSP3 >= 800) {
     carSP3 = -100
-  } if(sunSP >= 800){
-    moonSP = -50
-  } else if(moonSP <= 800 && sunSP >= 800){
+  //logic day/night
+  } if(sunSP >= 825){
     moonSP = moonSP + 1
+    SkyColor = "black"
+  } 
+  if(moonSP >= 825){
+    sunSP = -50  
+    moonSP = -50
+    SkyColor = "lightblue"
   }
 
 
@@ -69,6 +76,12 @@ function draw() {
   rect(600, 538, 50, 25)
   rect(700, 538, 50, 25)
   rect(800, 538, 50, 25)
+ 
+
+    //light model
+  fill("darkgrey")
+  rect(710, 270, 72, 155)
+  rect(725, 270, 40, 230)
 
   //auto rood
   fill("grey")
@@ -76,7 +89,7 @@ function draw() {
   circle(50 + carSP1, 530, 20)
   fill("red")
   rect(carSP1 - 10, 500, 90, 25)
-  rect(carSP1 - 10, 485, 70, 25)
+  rect(carSP1 + 50, 485, 10, 25)
   //auto licht groen
   fill("grey")
   circle(carSP3, 530, 20)
@@ -92,9 +105,15 @@ function draw() {
   rect(carSP2 - 10, 500, 90, 25)
   rect(carSP2 - 10, 485, 70, 25)
 
-  fill("darkgrey")
-  rect(710, 270, 72, 155)
-  rect(725,)
+
+  //tree front
+  fill("brown")
+  rect(600,450, 40,150)
+  fill("green")
+  circle(620,450, 75)
+  circle(640,460, 70)
+  circle(610,425, 70)
+  circle(600,460, 70)
 
 
   //logic light
@@ -104,24 +123,33 @@ function draw() {
     wait = 0
   }
 }
-  if (D == 1){
+  if (D == 3){
     strokeWeight(2)
       fill("red")
       circle (745,300, 40)
+    fill("black")
+    circle (745,350, 40)
+    circle (745,400, 40)
   } else if (D == 2){
     strokeWeight(2)
     fill("orange")
     circle (745,350, 40)
-      carSP1 = carSP1 + 1
-      carSP2 = carSP2 + 1
-      carSP3 = carSP3 + 1
-  } else if (D == 3){
+    fill("black")
+    circle (745,400, 40)
+    circle (745,300, 40)
+      carSP1 = carSP1 + 5/2
+      carSP2 = carSP2 + 5/2
+      carSP3 = carSP3 + 5/2
+  } else if (D == 1){
     strokeWeight(2)
     fill("green")
     circle (745,400, 40)
-      carSP1 = carSP1 + 3
-      carSP2 = carSP2 + 3
-      carSP3 = carSP3 + 3
+    fill("black")
+    circle (745,350, 40)
+    circle (745,300, 40)
+      carSP1 = carSP1 + 5
+      carSP2 = carSP2 + 5
+      carSP3 = carSP3 + 5
   } else if (D==4){
     D = 1
   }

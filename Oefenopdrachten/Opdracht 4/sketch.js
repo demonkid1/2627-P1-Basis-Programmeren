@@ -38,7 +38,7 @@ wait = wait + 1
   /strokeWeight(2)
   textSize(100)
   //counter
-  text (X, 20,210)
+  text (D, 20,210)
   //stoplight base
   fill("grey")
   rect(20,250, 50,150)

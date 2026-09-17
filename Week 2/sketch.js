@@ -2,6 +2,8 @@ let carSP1 = 0
 let carSP2 = -500
 let carSP3 = -700
 let sunSP = 20
+let D = 1;
+let wait = 0
 
 function setup() {
   createCanvas(800, 600);
@@ -11,10 +13,9 @@ function draw() {
   background("lightblue");
   text(mouseX +" "+ mouseY, 100,100)
   //variablelen
-  carSP1 = carSP1 + 3
-  carSP2 = carSP2 + 3
-  carSP3 = carSP3 + 3
+
   sunSP = sunSP + 2
+  wait = wait + 1
   text(carSP2, 10, 10)
   //logic
   if (carSP1 >= 800) {
@@ -79,4 +80,34 @@ function draw() {
   fill("blue")
   rect(carSP2 - 10, 500, 90, 25)
   rect(carSP2 - 10, 485, 70, 25)
+
+  
+  //logic
+  if (keyIsPressed && wait >= 15){
+  if (keyCode == ENTER){
+    D = D + 1
+    wait = 0
+  }
+}
+  if (D == 1){
+    strokeWeight(2)
+      fill("red")
+      circle (45,275, 40)
+  } else if (D == 2){
+    strokeWeight(2)
+    fill("orange")
+    circle (45,325, 40)
+      carSP1 = carSP1 + 1
+      carSP2 = carSP2 + 1
+      carSP3 = carSP3 + 1
+  } else if (D == 3){
+    strokeWeight(2)
+    fill("green")
+    circle (45,375, 40)
+      carSP1 = carSP1 + 3
+      carSP2 = carSP2 + 3
+      carSP3 = carSP3 + 3
+  } else if (D==4){
+    D = 1
+  }
 }

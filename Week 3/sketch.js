@@ -1,6 +1,5 @@
 let Player = 1
 let Team = "grey"
-let Cooldown = 0
 let RectX1 = 100
 let RectX2 = 255
 let RectX3 = 410
@@ -155,114 +154,144 @@ if (mouseIsPressed === true && Player == 1 && Box9 == "grey" &&
 function draw() {
   background(190);
 
-Cooldown = Cooldown+1
+
 //logic
 
 
-// if (Player >= 3){
-//   Player = 1
-// }
 
-
-
-// if (mouseIsPressed === true && Player == 1 && Box1 == "grey" &&
+// if (Box1 == "grey" &&
 //   mouseX > RectX1 && mouseX < RectX1 + RectW &&
 //   mouseY > RectY1 && mouseY < RectY1 + RectH 
 // ){
-//   Box1 = "red"
-// }else if (mouseIsPressed === true && Player == 2 && Box1 == "grey" &&
-//   mouseX > RectX1 && mouseX < RectX1 + RectW &&
-//   mouseY > RectY1 && mouseY < RectY1 + RectH ){
-//   Box1 = "blue"
-//   }
-
-// if (mouseIsPressed === true && Player == 1 && Box2 == "grey" &&
+//   Box1 = "lightgrey"
+  
+// }else
+// Box1 = "grey"
+// if (Box2 == "grey" &&
 //   mouseX > RectX2 && mouseX < RectX2 + RectW &&
 //   mouseY > RectY1 && mouseY < RectY1 + RectH
 // ){
-//   Box2 = "red"
-// }else if (mouseIsPressed === true && Player == 2 && Box2 == "grey" &&
-//   mouseX > RectX2 && mouseX < RectX2 + RectW &&
-//   mouseY > RectY1 && mouseY < RectY1 + RectH ){
-//   Box2 = "blue"
-//   }
-
-// if (mouseIsPressed === true && Player == 1 && Box3 == "grey" &&
+//   Box2 = "lightgrey"
+// }else{
+//   Box2 = "grey"
+// }
+// if (Box3 == "grey" &&
 //   mouseX > RectX3 && mouseX < RectX3 + RectW &&
 //   mouseY > RectY1 && mouseY < RectY1 + RectH
 // ){
-//   Box3 = "red"
-// }else if (mouseIsPressed === true && Player == 2 && Box3 == "grey" &&
-//   mouseX > RectX3 && mouseX < RectX3 + RectW &&
-//   mouseY > RectY1 && mouseY < RectY1 + RectH ){
-//   Box3 = "blue"
+//   Box3 = "lightgrey"
+// }else{
+//   Box3 = "grey"
 // }
-
-// if (mouseIsPressed === true && Player == 1 && Box4 == "grey" &&
+// if (Box4 == "grey" &&
 //   mouseX > RectX1 && mouseX < RectX1 + RectW &&
 //   mouseY > RectY2 && mouseY < RectY2 + RectH
 // ){
-//   Box4 = "red"
-// }else if (mouseIsPressed === true && Player == 2 && Box4 == "grey" &&
-//   mouseX > RectX1 && mouseX < RectX1 + RectW &&
-//   mouseY > RectY2 && mouseY < RectY2 + RectH ){
-//   Box4 = "blue"
+//   Box4 = "lightgrey"
+// }else{
+//   Box4 = "grey"
 // }
 
-// if (mouseIsPressed === true && Player == 1 && Box5 == "grey" &&
-//   mouseX > RectX2 && mouseX < RectX2 + RectW &&
-//   mouseY > RectY2 && mouseY < RectY2 + RectH
-// ){
-//   Box5 = "red"
-// }else if (mouseIsPressed === true && Player == 2 && Box5 == "grey" &&
-//   mouseX > RectX2 && mouseX < RectX2 + RectW &&
-//   mouseY > RectY2 && mouseY < RectY2 + RectH ){
-//   Box5 = "blue"
-// }
 
-// if (mouseIsPressed === true && Player == 1 && Box6 == "grey" &&
-//   mouseX > RectX3 && mouseX < RectX3 + RectW &&
-//   mouseY > RectY2 && mouseY < RectY2 + RectH
-// ){
-//   Box6 = "red"
-// }else if (mouseIsPressed === true && Player == 2 && Box6 == "grey" &&
-//   mouseX > RectX3 && mouseX < RectX3 + RectW &&
-//   mouseY > RectY2 && mouseY < RectY2 + RectH ){
-//   Box6 = "blue"
-// }
 
-// if (mouseIsPressed === true && Player == 1 && Box7 == "grey" &&
-//   mouseX > RectX1 && mouseX < RectX1 + RectW &&
-//   mouseY > RectY3 && mouseY < RectY3 + RectH
-// ){
-//   Box7 = "red"
-// }else if (mouseIsPressed === true && Player == 2 && Box7 == "grey" &&
-//   mouseX > RectX1 && mouseX < RectX1 + RectW &&
-//   mouseY > RectY3 && mouseY < RectY3 + RectH ){
-//   Box7 = "blue"
-// }
+if (mouseIsPressed === true && Player == 1 && Box1 == "grey" &&
+  mouseX > RectX1 && mouseX < RectX1 + RectW &&
+  mouseY > RectY1 && mouseY < RectY1 + RectH 
+){
+  Box1 = "red"
+}else if (mouseIsPressed === true && Player == 2 && Box1 == "grey" &&
+  mouseX > RectX1 && mouseX < RectX1 + RectW &&
+  mouseY > RectY1 && mouseY < RectY1 + RectH ){
+  Box1 = "blue"
+  }
 
-// if (mouseIsPressed === true && Player == 1 && Box8 == "grey" &&
-//   mouseX > RectX2 && mouseX < RectX2 + RectW &&
-//   mouseY > RectY3 && mouseY < RectY3 + RectH
-// ){
-//   Box8 = "red"
-// }else if (mouseIsPressed === true && Player == 2 && Box8 == "grey" &&
-//   mouseX > RectX2 && mouseX < RectX2 + RectW &&
-//   mouseY > RectY3 && mouseY < RectY3 + RectH ){
-//   Box8 = "blue"
-// }
+if (mouseIsPressed === true && Player == 1 && Box2 == "grey" &&
+  mouseX > RectX2 && mouseX < RectX2 + RectW &&
+  mouseY > RectY1 && mouseY < RectY1 + RectH
+){
+  Box2 = "red"
+}else if (mouseIsPressed === true && Player == 2 && Box2 == "grey" &&
+  mouseX > RectX2 && mouseX < RectX2 + RectW &&
+  mouseY > RectY1 && mouseY < RectY1 + RectH ){
+  Box2 = "blue"
+  }
 
-// if (mouseIsPressed === true && Player == 1 && Box9 == "grey" &&
-//   mouseX > RectX3 && mouseX < RectX3 + RectW &&
-//   mouseY > RectY3 && mouseY < RectY3 + RectH
-// ){
-//   Box9 = "red"
-// }else if (mouseIsPressed === true && Player == 2 && Box9 == "grey" &&
-//   mouseX > RectX3 && mouseX < RectX3 + RectW &&
-//   mouseY > RectY3 && mouseY < RectY3 + RectH ){
-//   Box9 = "blue"
-// }
+if (mouseIsPressed === true && Player == 1 && Box3 == "grey" &&
+  mouseX > RectX3 && mouseX < RectX3 + RectW &&
+  mouseY > RectY1 && mouseY < RectY1 + RectH
+){
+  Box3 = "red"
+}else if (mouseIsPressed === true && Player == 2 && Box3 == "grey" &&
+  mouseX > RectX3 && mouseX < RectX3 + RectW &&
+  mouseY > RectY1 && mouseY < RectY1 + RectH ){
+  Box3 = "blue"
+}
+
+if (mouseIsPressed === true && Player == 1 && Box4 == "grey" &&
+  mouseX > RectX1 && mouseX < RectX1 + RectW &&
+  mouseY > RectY2 && mouseY < RectY2 + RectH
+){
+  Box4 = "red"
+}else if (mouseIsPressed === true && Player == 2 && Box4 == "grey" &&
+  mouseX > RectX1 && mouseX < RectX1 + RectW &&
+  mouseY > RectY2 && mouseY < RectY2 + RectH ){
+  Box4 = "blue"
+}
+
+if (mouseIsPressed === true && Player == 1 && Box5 == "grey" &&
+  mouseX > RectX2 && mouseX < RectX2 + RectW &&
+  mouseY > RectY2 && mouseY < RectY2 + RectH
+){
+  Box5 = "red"
+}else if (mouseIsPressed === true && Player == 2 && Box5 == "grey" &&
+  mouseX > RectX2 && mouseX < RectX2 + RectW &&
+  mouseY > RectY2 && mouseY < RectY2 + RectH ){
+  Box5 = "blue"
+}
+
+if (mouseIsPressed === true && Player == 1 && Box6 == "grey" &&
+  mouseX > RectX3 && mouseX < RectX3 + RectW &&
+  mouseY > RectY2 && mouseY < RectY2 + RectH
+){
+  Box6 = "red"
+}else if (mouseIsPressed === true && Player == 2 && Box6 == "grey" &&
+  mouseX > RectX3 && mouseX < RectX3 + RectW &&
+  mouseY > RectY2 && mouseY < RectY2 + RectH ){
+  Box6 = "blue"
+}
+
+if (mouseIsPressed === true && Player == 1 && Box7 == "grey" &&
+  mouseX > RectX1 && mouseX < RectX1 + RectW &&
+  mouseY > RectY3 && mouseY < RectY3 + RectH
+){
+  Box7 = "red"
+}else if (mouseIsPressed === true && Player == 2 && Box7 == "grey" &&
+  mouseX > RectX1 && mouseX < RectX1 + RectW &&
+  mouseY > RectY3 && mouseY < RectY3 + RectH ){
+  Box7 = "blue"
+}
+
+if (mouseIsPressed === true && Player == 1 && Box8 == "grey" &&
+  mouseX > RectX2 && mouseX < RectX2 + RectW &&
+  mouseY > RectY3 && mouseY < RectY3 + RectH
+){
+  Box8 = "red"
+}else if (mouseIsPressed === true && Player == 2 && Box8 == "grey" &&
+  mouseX > RectX2 && mouseX < RectX2 + RectW &&
+  mouseY > RectY3 && mouseY < RectY3 + RectH ){
+  Box8 = "blue"
+}
+
+if (mouseIsPressed === true && Player == 1 && Box9 == "grey" &&
+  mouseX > RectX3 && mouseX < RectX3 + RectW &&
+  mouseY > RectY3 && mouseY < RectY3 + RectH
+){
+  Box9 = "red"
+}else if (mouseIsPressed === true && Player == 2 && Box9 == "grey" &&
+  mouseX > RectX3 && mouseX < RectX3 + RectW &&
+  mouseY > RectY3 && mouseY < RectY3 + RectH ){
+  Box9 = "blue"
+}
 
   strokeWeight(0)
   fill(Box1)

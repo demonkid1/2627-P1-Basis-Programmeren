@@ -252,7 +252,7 @@ function draw() {
   //logic reset
   if (mouseIsPressed === true &&
     mouseX > RectRX && mouseX < RectRX + RectRW &&
-    mouseY > RectRY && mouseY < RectRY + RectRH) {
+    mouseY > RectRY && mouseY < RectRY + RectRH || DRAW == 1) {
     Win = 0
     Box1 = "grey"
     Box2 = "grey"
@@ -264,29 +264,8 @@ function draw() {
     Box8 = "grey"
     Box9 = "grey"
     Player = 1
+    DRAW = 2
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   //broken hover
 

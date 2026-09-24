@@ -21,12 +21,14 @@ let Box6 = "grey"
 let Box7 = "grey"
 let Box8 = "grey"
 let Box9 = "grey"
+let Song;
 let Win = 0
 let BG = "darkred"
 let DRAW = 0
 
 
 function setup() {
+  Song = loadSound('Week 3/universfield-computer-mouse-click-352734.mp3')
   createCanvas(1000, 1000);
 }
 
@@ -37,7 +39,12 @@ function mousePressed() {
     if (Player >= 3) {
       Player = 1
     }
-    if (mouseIsPressed === true && Player == 1 && Box1 == "grey" &&
+
+    
+    
+
+
+ if (mouseIsPressed === true && Player == 1 && Box1 == "grey" &&
       mouseX > RectX1 && mouseX < RectX1 + RectW &&
       mouseY > RectY1 && mouseY < RectY1 + RectH
     ) {
@@ -153,10 +160,19 @@ function mousePressed() {
       Box9 = "blue"
       Player++
     }
-
   } else {
-
+  if (song.isPlaying()) {
+    
+    song.stop();
+    console.log(asd)
+    background(255, 0, 0);
+  } else {
+    song.play();
+    background(0, 255, 0);
   }
+}
+
+
 }
 
 function draw() {
@@ -204,6 +220,7 @@ function draw() {
   }
 
   if (Win == 1) {
+    strokeWeight(0)
     fill("white")
     rect(RectRX, RectRY, RectRW, RectRH)
     fill("black")
@@ -252,7 +269,7 @@ function draw() {
   //logic reset
   if (mouseIsPressed === true &&
     mouseX > RectRX && mouseX < RectRX + RectRW &&
-    mouseY > RectRY && mouseY < RectRY + RectRH || DRAW == 1) {
+    mouseY > RectRY && mouseY < RectRY + RectRH && Win == 1) {
     Win = 0
     Box1 = "grey"
     Box2 = "grey"
@@ -267,40 +284,7 @@ function draw() {
     DRAW = 2
   }
 
-  //broken hover
-
-  // if (Box1 == "grey" &&
-  //   mouseX > RectX1 && mouseX < RectX1 + RectW &&
-  //   mouseY > RectY1 && mouseY < RectY1 + RectH 
-  // ){
-  //   Box1 = "lightgrey"
-
-  // }else
-  // Box1 = "grey"
-  // if (Box2 == "grey" &&
-  //   mouseX > RectX2 && mouseX < RectX2 + RectW &&
-  //   mouseY > RectY1 && mouseY < RectY1 + RectH
-  // ){
-  //   Box2 = "lightgrey"
-  // }else{
-  //   Box2 = "grey"
-  // }
-  // if (Box3 == "grey" &&
-  //   mouseX > RectX3 && mouseX < RectX3 + RectW &&
-  //   mouseY > RectY1 && mouseY < RectY1 + RectH
-  // ){
-  //   Box3 = "lightgrey"
-  // }else{
-  //   Box3 = "grey"
-  // }
-  // if (Box4 == "grey" &&
-  //   mouseX > RectX1 && mouseX < RectX1 + RectW &&
-  //   mouseY > RectY2 && mouseY < RectY2 + RectH
-  // ){
-  //   Box4 = "lightgrey"
-  // }else{
-  //   Box4 = "grey"
-  // }
+  
 
 
   strokeWeight(0)
@@ -338,5 +322,154 @@ function draw() {
   strokeWeight(0)
   fill(Box9)
   rect(RectX3, RectY3, RectW, RectH)
+
+
+  //broken hover
+
+  if (
+    mouseX > RectX1 && mouseX < RectX1 + RectW &&
+    mouseY > RectY1 && mouseY < RectY1 + RectH 
+  ){
+    fill(Box1)
+    rect(RectX1, RectY1, RectW, RectH)
+
+  }else{
+    
+    fill(100, 0, 0, 75);
+    rect(RectX1, RectY1, RectW, RectH)
+
+  }
+  
+  if (
+    mouseX > RectX2 && mouseX < RectX2 + RectW &&
+    mouseY > RectY1 && mouseY < RectY1 + RectH
+  ){
+
+    fill(Box2)
+        rect(RectX2, RectY1, RectW, RectH)
+  }else{
+        fill(100, 0, 0, 75);
+    rect(RectX2, RectY1, RectW, RectH)
+  }
+
+    if (
+    mouseX > RectX3 && mouseX < RectX3 + RectW &&
+    mouseY > RectY1 && mouseY < RectY1 + RectH 
+  ){
+    fill(Box3)
+    rect(RectX3, RectY1, RectW, RectH)
+
+  }else{
+    
+    fill(100, 0, 0, 75);
+    rect(RectX3, RectY1, RectW, RectH)
+
+  }
+  
+  if (
+    mouseX > RectX1 && mouseX < RectX1 + RectW &&
+    mouseY > RectY2 && mouseY < RectY2 + RectH
+  ){
+
+    fill(Box4)
+        rect(RectX1, RectY2, RectW, RectH)
+  }else{
+        fill(100, 0, 0, 75);
+    rect(RectX1, RectY2, RectW, RectH)
+  }
+
+    if (
+    mouseX > RectX2 && mouseX < RectX2 + RectW &&
+    mouseY > RectY2 && mouseY < RectY2 + RectH 
+  ){
+    fill(Box5)
+    rect(RectX2, RectY2, RectW, RectH)
+
+  }else{
+    
+    fill(100, 0, 0, 75);
+    rect(RectX2, RectY2, RectW, RectH)
+
+  }
+  
+
+
+    if (
+    mouseX > RectX3 && mouseX < RectX3 + RectW &&
+    mouseY > RectY2 && mouseY < RectY2 + RectH 
+  ){
+    fill(Box6)
+    rect(RectX3, RectY2, RectW, RectH)
+
+  }else{
+    fill(100, 0, 0, 75);
+    rect(RectX3, RectY2, RectW, RectH)
+  }
+  
+  if (
+    mouseX > RectX1 && mouseX < RectX1 + RectW &&
+    mouseY > RectY3 && mouseY < RectY3 + RectH
+  ){
+
+    fill(Box7)
+        rect(RectX1, RectY3, RectW, RectH)
+  }else{
+        fill(100, 0, 0, 75);
+    rect(RectX1, RectY3, RectW, RectH)
+  }
+  
+    if (
+    mouseX > RectX2 && mouseX < RectX2 + RectW &&
+    mouseY > RectY3 && mouseY < RectY3 + RectH
+  ){
+
+    fill(Box8)
+        rect(RectX2, RectY3, RectW, RectH)
+  }else{
+        fill(100, 0, 0, 75);
+    rect(RectX2, RectY3, RectW, RectH)
+  }
+  
+      if (
+    mouseX > RectX3 && mouseX < RectX3 + RectW &&
+    mouseY > RectY3 && mouseY < RectY3 + RectH
+  ){
+
+    fill(Box9)
+        rect(RectX3, RectY3, RectW, RectH)
+  }else{
+        fill(100, 0, 0, 75);
+    rect(RectX3, RectY3, RectW, RectH)
+  }
+  
+  if (Win = 1 && Box1 == "red" && Box2 == "red" && Box3 == "red"){
+    strokeWeight(25)
+    fill("black")
+    line(100, 175, 555, 175)
+  }
+
+  if (Win = 1 && Box4 == "red" && Box5 == "red" && Box6 == "red"){
+    strokeWeight(25)
+    fill("black")
+    line(100, 325, 555, 325)
+  }
+
+  if (Win = 1 && Box7 == "red" && Box8 == "red" && Box9 == "red"){
+    strokeWeight(25)
+    fill("black")
+    line(100, 500, 555, 500)
+  }
+
+  if(Win = 1 && Box1 == "red" && Box4 == "red" && Box7 == "red"){
+    strokeWeight(25)
+    fill("black")
+    line(175, 100, 175, 550)
+  }
+
+    if(Win = 1 && Box2 == "red" && Box5 == "red" && Box8 == "red"){
+    strokeWeight(25)
+    fill("black")
+    line(275, 100, 300, 550)
+  }
 
 }

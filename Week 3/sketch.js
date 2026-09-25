@@ -1,3 +1,4 @@
+//variabelen
 let Player = 1
 let Team = "grey"
 let RectX1 = 100
@@ -21,14 +22,11 @@ let Box6 = "grey"
 let Box7 = "grey"
 let Box8 = "grey"
 let Box9 = "grey"
-let Song;
-let Win = 0
+let Win= 0
 let BG = "darkred"
 let DRAW = 0
 
-
 function setup() {
-  Song = loadSound('Week 3/universfield-computer-mouse-click-352734.mp3')
   createCanvas(1000, 1000);
 }
 
@@ -43,7 +41,7 @@ function mousePressed() {
     
     
 
-
+//logic clicken
  if (mouseIsPressed === true && Player == 1 && Box1 == "grey" &&
       mouseX > RectX1 && mouseX < RectX1 + RectW &&
       mouseY > RectY1 && mouseY < RectY1 + RectH
@@ -56,7 +54,7 @@ function mousePressed() {
       Box1 = "blue"
       Player++
     }
-
+    
     if (mouseIsPressed === true && Player == 1 && Box2 == "grey" &&
       mouseX > RectX2 && mouseX < RectX2 + RectW &&
       mouseY > RectY1 && mouseY < RectY1 + RectH
@@ -161,15 +159,7 @@ function mousePressed() {
       Player++
     }
   } else {
-  if (song.isPlaying()) {
-    
-    song.stop();
-    console.log(asd)
-    background(255, 0, 0);
-  } else {
-    song.play();
-    background(0, 255, 0);
-  }
+
 }
 
 
@@ -177,6 +167,7 @@ function mousePressed() {
 
 function draw() {
   background(190);
+
   fill(BG)
   rect(0, 0, 1000, 1000)
   if (Player == 1 || 3) {
@@ -285,7 +276,7 @@ function draw() {
   }
 
   
-
+//de speel veld/Box1 t/m box9
 
   strokeWeight(0)
   fill(Box1)
@@ -324,7 +315,7 @@ function draw() {
   rect(RectX3, RectY3, RectW, RectH)
 
 
-  //broken hover
+  //hover functie
 
   if (
     mouseX > RectX1 && mouseX < RectX1 + RectW &&
@@ -442,6 +433,8 @@ function draw() {
     rect(RectX3, RectY3, RectW, RectH)
   }
   
+//te laten zien hoe iemand heeft gewonnen
+
   if (Win = 1 && Box1 == "red" && Box2 == "red" && Box3 == "red"){
     strokeWeight(25)
     fill("black")
@@ -466,10 +459,77 @@ function draw() {
     line(175, 100, 175, 550)
   }
 
-    if(Win = 1 && Box2 == "red" && Box5 == "red" && Box8 == "red"){
+  if(Win = 1 && Box2 == "red" && Box5 == "red" && Box8 == "red"){
     strokeWeight(25)
     fill("black")
-    line(275, 100, 300, 550)
+    line(300, 100, 300, 550)
   }
+
+  if(Win = 1 && Box3 == "red" && Box6 == "red" && Box9 == "red"){
+    strokeWeight(25)
+    fill("black")
+    line(450, 100, 450, 550)
+  }
+
+  if(Win = 1 && Box1 == "red" && Box5 == "red" && Box9 == "red"){
+    strokeWeight(25)
+    fill("black")
+    line(100, 100, 600, 600)
+  }
+
+  if(Win = 1 && Box3 == "red" && Box5 == "red" && Box7 == "red"){
+    strokeWeight(25)
+    fill("black")
+    line(600, 100, 100, 600)
+  }
+
+  if (Win = 1 && Box1 == "blue" && Box2 == "blue" && Box3 == "blue"){
+    strokeWeight(25)
+    fill("black")
+    line(100, 175, 555, 175)
+}
+
+if (Win = 1 && Box4 == "blue" && Box5 == "blue" && Box6 == "blue"){
+    strokeWeight(25)
+    fill("black")
+    line(100, 325, 555, 325)
+}
+
+if (Win = 1 && Box7 == "blue" && Box8 == "blue" && Box9 == "blue"){
+    strokeWeight(25)
+    fill("black")
+    line(100, 500, 555, 500)
+}
+
+if(Win = 1 && Box1 == "blue" && Box4 == "blue" && Box7 == "blue"){
+    strokeWeight(25)
+    fill("black")
+    line(175, 100, 175, 550)
+}
+
+if(Win = 1 && Box2 == "blue" && Box5 == "blue" && Box8 == "blue"){
+    strokeWeight(25)
+    fill("black")
+    line(300, 100, 300, 550)
+}
+
+if(Win = 1 && Box3 == "blue" && Box6 == "blue" && Box9 == "blue"){
+    strokeWeight(25)
+    fill("black")
+    line(450, 100, 450, 550)
+}
+
+if(Win = 1 && Box1 == "blue" && Box5 == "blue" && Box9 == "blue"){
+    strokeWeight(25)
+    fill("black")
+    line(100, 100, 600, 600)
+}
+
+if(Win = 1 && Box3 == "blue" && Box5 == "blue" && Box7 == "blue"){
+    strokeWeight(25)
+    fill("black")
+    line(600, 100, 100, 600)
+}
+
 
 }

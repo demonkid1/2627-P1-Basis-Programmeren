@@ -1,16 +1,29 @@
-let posX = [];
-let posY = [];
-let posSize = [];
-let posRX = [];
-let posRY = [];
-let posSizeR = [];
-let R = [];
-let G = [];
-let B = [];
-let angle = 0
-let rotationSpeed =[]
+let DATA = [
+];
 
+let  posX = []
+let  posY = []
+let  posSize = []
+let  posRX = []
+let  posRY = []
+let  posSizeR = []
+let  R = []
+let  G = []
+let  B = []
+let  angle = 0
+let  rotationSpeed =[]
+
+
+
+
+//starting stats
 function setup() {
+  posRX.pull
+  posRY.pull
+
+  posX = posRX
+  posY = posRY
+  posSize = posSizeR
   createCanvas(800, 600);
   rectMode(CENTER);
   for (let i = 0; i < 100; i++) {
@@ -26,7 +39,7 @@ function setup() {
     angle += rotationSpeed / 2;
   }
 }
-
+//circle, rect en de arrow die naar je muis wijst zit hier in
 function draw() {
   background(220);  
   for (let i = 0; i < 100; i++) {
@@ -42,7 +55,7 @@ function draw() {
     translate(x, y);
     rotate(angle);
     rect(0, 0, 60, 20); 
-  triangle(30, -10, 40, 0, 30, 10);
+     triangle(30, -10, 40, 0, 30, 10);
     translate(posX, posY)
     rotate(angle)
     if (posX[i] <= -100)
@@ -56,6 +69,7 @@ function draw() {
     fill(R[i], G[i], B[i],200);
     circle(posX[i], posY[i], posSize[i]);
   }
+//roteate functie
     for (let i = 0; i < 100; i++) {
     translate(posX, posY)
     rotate(angle)
@@ -72,7 +86,7 @@ function draw() {
   }
 }
 
-
+//keypressed function zodat je kan de kleuren reseten
 function keyPressed() {
   console.log("keypress");;
   if(key === 'Backspace'){
@@ -91,5 +105,27 @@ function keyPressed() {
     G.push(int(random(0, 255)));
     B.push(int(random(0, 255)));
   }
+//SAVE
   }
+  if(keyCode === 83){
+    console.log("save")
+    posRY =posY
+    posRX =posX
+    DATA.push(posX, posY, posSize)
+   
+  }
+  if(keyCode === 68){
+    console.log(DATA)
+   
+    DATA.getItem[0.1]
+     for (let i = 0; i < 100; i++) {
+    console.log(DATA)
+    
+    // R.push(int(random(0, 255)));
+    // G.push(int(random(0, 255)));
+    // B.push(int(random(0, 255)));
+  }
+  }
+
+
 }

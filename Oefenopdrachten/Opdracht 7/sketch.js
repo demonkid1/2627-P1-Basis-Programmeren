@@ -39,6 +39,7 @@ for (let row of C) {
         square(x + 50, y + 50, 25)
       }
       x += 25;
+    
     }
     y += 25
     x = 0;

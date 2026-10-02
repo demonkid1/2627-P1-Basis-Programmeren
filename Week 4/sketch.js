@@ -121,9 +121,6 @@ function keyPressed() {
      for (let i = 0; i < 100; i++) {
     console.log(DATA)
     
-    // R.push(int(random(0, 255)));
-    // G.push(int(random(0, 255)));
-    // B.push(int(random(0, 255)));
   }
   }
 

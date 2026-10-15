@@ -5,6 +5,7 @@ let locationY = [350, 350, 450,450]
 let y = 10
 let imgROW = ['/Week 5/assets/BACKGROUND_A.webp']
 let img;
+buttonInfo = []
 
 async function setup() {
   createCanvas(800, 600);

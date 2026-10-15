@@ -1,8 +1,8 @@
 let imgROW = [
   '/Week 6/BACKGROUND.gif']
-let ANIMATIONS =["/Week 6/Steve walking left(1).gif",
-               "/Week 6/Steve walking right.gif"
-]
+let LEFT =["/Week 6/Steve walking left(1).gif",]
+let right =["/Week 6/Steve walking right(1).gif"]
+
 
 let imgBACK;
 let GIF;
@@ -14,7 +14,7 @@ let stop = false
 function setup() {
   createCanvas(400, 400);
    imgBACK = loadImage(imgROW);
-   GIF = loadImage(ANIMATIONS[A])
+   LEFT = loadImage(ANIMATIONS[A])
    
 }
 
@@ -32,7 +32,7 @@ image(imgBACK, 0, 0, 400,400);
   M++
   console.log("idk")
  }
-image(GIF, X+M,240, 150,150)
+image(LEFT, X+M,240, 150,150)
 }
 
 function mousePressed(){

@@ -14,7 +14,7 @@ let stop = false
 function setup() {
   createCanvas(400, 400);
    imgBACK = loadImage(imgROW);
-   LEFT = loadImage(ANIMATIONS[A])
+   LEFT = loadImage(LEFT[A])
    
 }
 

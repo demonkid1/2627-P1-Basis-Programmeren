@@ -3,6 +3,8 @@ let LEFT = ["/Week 6/Steve walking left(1).gif"]
 let RIGHT = ["/Week 6/Steve walking right(1).gif"]
 let IDLEL = ["/Week 6/Steve idle L.png"]
 let IDLER = ["/Week 6/Steve idle R.png"]
+let ARROWL = ["/Week 6/Arrow left.png"]
+let ARROWR = ["/Week 6/Arrow right.png"]
 let idleL
 let idleR
 let currentani
@@ -10,6 +12,7 @@ let imgBACK
 let A = 0
 let X = 0
 let M = 2
+
 let hunger = 100
 let energy = 100
 let happiness = 100
@@ -27,15 +30,19 @@ function setup() {
   idleL = loadImage(IDLEL[0])
   idleR = loadImage(IDLER[0])
   currentani = RIGHT
-    if (getItem("hunger")==null)
+  arrowL = loadImage(ARROWL[0])
+    if (getItem("Hunger")==null)
   {
-    honger = 100;
+    hunger = 100;
   }
   else
   {
-    honger = getItem("hunger");
+    hunger = getItem("Hunger")
+    if (getItem("Health")){
+      
+    }
   }
-  console.log(getItem("hunger"));
+  console.log(getItem("Hunger"))
 }
 
 function draw() {
@@ -43,7 +50,7 @@ function draw() {
   image(imgBACK, 0, 0, 400, 400)
 
   //zodat de informatie wordt opgeslagen
-  storeItem("hunger",hunger);
+  storeItem("Hunger", hunger)
 
   // ENERGY SYSTEM and the movemetn so that Steve only moves when he has energy
   if (energy > 0 && hunger >= 0) {

@@ -1,0 +1,13 @@
+.A{
+    color: black;
+    text-align: center;
+    position: relative;
+    bottom: 700px;  
+}
+
+.STprice{
+    position: relative;
+    bottom: 15px;
+    font-size: larger;
+    left: 100px;
+}

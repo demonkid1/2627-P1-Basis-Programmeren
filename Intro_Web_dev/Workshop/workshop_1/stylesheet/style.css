@@ -1,9 +1,6 @@
 body{
     margin: 0;
-
 }
-
-
 
 header{
     color: black;
@@ -18,11 +15,22 @@ header{
     background-position-y: -10px;
 }
 
+.ButtonA{
+    position: relative;
+    left: 50px;
+}
+
 .STprice{
     position: relative;
     bottom: 15px;
     font-size: larger;
-    left: 100px;
+    left: 150px;
+}
+
+.ButtonB{
+    position: relative;
+    left: 450px;
+    bottom: 290px;
 }
 
 .divider {
@@ -54,3 +62,6 @@ header{
     border: 1px solid #ccc;
 }
 
+.Moveimg1{
+    
+}

@@ -69,3 +69,19 @@ header{
     position: relative;
     left: 100px;
 }
+
+.blok {
+    background-color: #d9480f;
+    color: #ffffff;
+    width: 100px;
+    height: 100px;
+}
+
+.rij {
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* verticaal in het midden */
+    height: 300px;
+    background-color: #eeeeee;
+     gap: 250px;
+}

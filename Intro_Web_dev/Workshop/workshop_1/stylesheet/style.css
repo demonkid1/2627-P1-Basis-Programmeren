@@ -37,7 +37,7 @@ header{
     border-style: solid;
     position: relative;
     bottom: 40px;
-    
+   
 }
 
 .Mainimg{
@@ -78,10 +78,18 @@ header{
 }
 
 .rij {
+    width: 970px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;   /* verticaal in het midden */
+    
+
+    
     height: 300px;
     background-color: #eeeeee;
-     gap: 250px;
+    gap: 400px;
+    flex-wrap: wrap;
+}
+
+.Cblack{
+    color: black;
 }

@@ -16,11 +16,17 @@
 
 <div class="rij">           
     <div class="blok">
-        <button><a href="http://127.0.0.1:5500/Intro_Web_dev/Workshop/workshop_8/Item.php" style="height: 100px;"><img src="images\image_productA.jpg" alt="RAHHHh" style="height: 1000; width: 400;"></a></button>
+        <button><a href="Item.php" style="height: 100px;"><img src="images\image_productA.jpg" alt="RAHHHh" style="height: 1000; width: 400;"></a>
+        <?php
+        $asd = "RAHHH";
+        echo $asd;
+        ?>
+        
+        </button>
         <p class="Cblack">&euro; 59,99</p>
     </div>
     <div class="blok">
-        <button><a href="http://127.0.0.1:5500/Intro_Web_dev/Workshop/workshop_8/ItemB.php" style="height: 100px;"><img src="images\image_productB.jpg" alt="RAHHHh" style="height: 1000; width: 400;"></a></button>
+        <button><a href="ItemB.php" style="height: 100px;"><img src="images\image_productB.jpg" alt="RAHHHh" style="height: 1000; width: 400;"></a></button>
         <p class="Cblack">&euro; 32,99</p>
     </div>
     <div class="blok">

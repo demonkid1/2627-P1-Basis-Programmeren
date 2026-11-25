@@ -30,7 +30,7 @@
     <input type="submit" value="Versturen">
     </div>
 
-    <button><a href="http://127.0.0.1:5500/Intro_Web_dev/Workshop/workshop_1/index.html">Back</a></button>
+    <button><a href="index.php">Back</a></button>
     
 </form>
 </body>

@@ -1,3 +1,6 @@
+
+<?php include "includes/header.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,11 +20,7 @@
 <div class="rij">           
     <div class="blok">
         <button><a href="Item.php" style="height: 100px;"><img src="images\image_productA.jpg" alt="RAHHHh" style="height: 1000; width: 400;"></a>
-        <?php
-        $asd = "RAHHH";
-        echo $asd;
-        ?>
-        
+
         </button>
         <p class="Cblack">&euro; 59,99</p>
     </div>

@@ -1,5 +1,18 @@
 
+<?php
+include "includes/db.php";
+// Haal alle producten uit de database
+$producten = $pdo->query("SELECT * FROM producten")->fetchAll();
+?>
+
 <?php include "includes/header.php"; ?>
+
+<!-- <?php
+echo "<pre>";
+print_r($producten[0]);
+echo "</pre>";
+?> -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,33 +30,16 @@
     
     <p class="divider"></p>
 
-<div class="rij">           
-    <div class="blok">
-        <button><a href="Item.php" style="height: 100px;"><img src="images\image_productA.jpg" alt="RAHHHh" style="height: 1000; width: 400;"></a>
 
-        </button>
-        <p class="Cblack">&euro; 59,99</p>
-    </div>
-    <div class="blok">
-        <button><a href="ItemB.php" style="height: 100px;"><img src="images\image_productB.jpg" alt="RAHHHh" style="height: 1000; width: 400;"></a></button>
-        <p class="Cblack">&euro; 32,99</p>
-    </div>
-    <div class="blok">
-        <button><a href="http://127.0.0.1:5500/Intro_Web_dev/Workshop/workshop_8/ItemC.php" style="height: 100px;"><img src="images\image_productC.jpg" alt="RAHHHh" style="height: 1000; width: 400;"></a></button>
-        <p class="Cblack">&euro; 49,99</p>
-    </div>
-    <div class="blok">
-        <button><a href="http://127.0.0.1:5500/Intro_Web_dev/Workshop/workshop_8/ItemD.php" style="height: 100px;"><img src="images\image_productD.jpg" alt="RAHHHh" style="height: 1000; width: 400;"></a></button>
-        <p class="Cblack">&euro; 59,99</p>
-    </div>
-    <div class="blok">
-        <button><a href="http://127.0.0.1:5500/Intro_Web_dev/Workshop/workshop_8/ItemE.php" style="height: 100px;"><img src="images\image_productE.jpg" alt="RAHHHh" style="height: 1000; width: 400;"></a></button>
-        <p class="Cblack">&euro; 59,99</p>
-    </div>
-    <div class="blok">
-        <button><a href="http://127.0.0.1:5500/Intro_Web_dev/Workshop/workshop_8/ItemF.php" style="height: 100px;"><img src="images\image_productF.jpg" alt="RAHHHh" style="height: 1000; width: 400;"></a></button>
-        <p class="Cblack">&euro; 34,99</p>
-    </div>
+<div class="rij">
+    <?php foreach ($producten as $product) { ?>
+        <div class="rij">
+            <img src="images/<?php echo $product['afbeelding']; ?>" alt="<?php echo $product['naam']; ?>">
+            <h3><?php echo $product['naam']; ?></h3>
+            <p class="prijs">&euro; <?php echo number_format($product['prijs'], 2, ',', '.'); ?></p>
+            <a href="item.php?id=<?php echo $product['id']; ?>" class="knop">Bekijk</a>
+        </div>
+    <?php } ?>
 </div>
 
 </body>

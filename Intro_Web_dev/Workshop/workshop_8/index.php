@@ -25,22 +25,21 @@ echo "</pre>";
 </head>
 <body>
     
-    <!-- eerste image die je ziet & title -->
-    <header><h1>RTS games</h1></header>
-    
+
     <p class="divider"></p>
 
 
-<div class="rij">
+
     <?php foreach ($producten as $product) { ?>
         <div class="rij">
             <img src="images/<?php echo $product['afbeelding']; ?>" alt="<?php echo $product['naam']; ?>">
             <h3><?php echo $product['naam']; ?></h3>
             <p class="prijs">&euro; <?php echo number_format($product['prijs'], 2, ',', '.'); ?></p>
-            <a href="item.php?id=<?php echo $product['id']; ?>" class="knop">Bekijk</a>
+            <button class="abutton"><a href="item.php?id=<?php echo $product['id']; ?>" class="knop">Bekijk</a></button>
         </div>
     <?php } ?>
-</div>
+
+
 
 </body>
 </html>

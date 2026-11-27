@@ -1,3 +1,19 @@
+<?php
+include "includes/db.php";
+// Het id uit de link: detail.php?id=2 geeft 2
+$id = $_GET['id'] ?? 0;
+
+// Haal het product met dit id uit de database
+$stmt = $pdo->prepare("SELECT * FROM producten WHERE id = ?");
+$stmt->execute([$id]);
+$product = $stmt->fetch();
+
+echo "Je hebt product " . $id . " gekozen.";
+?>
+<?php include "includes/header.php"; ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +24,21 @@
     <title>item</title>
 </head>
 <body>
-        <header><h1>RTS games</h1></header>
-    
-    <p class="divider"></p>
+   <p class="divider"></p>
+<div class="moveitem">
+    <img src="images/<?php echo$product['afbeelding']; ?>" alt="<?php echo$product['naam']; ?>">
+    <div class="moveitem">
+        <h2><?php echo $product['naam']; ?></h2>
+        <p class="prijs">&euro; <?php echo number_format($product['prijs'], 2, ',', '.'); ?></p>
+
+         <div class="scroldown">
+        <p><?php echo $product['omschrijving']; ?></p>
+         </div>
+       
+    </div>
+</div>
     <button><a href="index.php">Back</a></button>
-    <img class="Moveimg1" src="images\image_productA.jpg" alt="RAHHHh" style="height: 700px; width: 1500px;">
-    <div class="scroldown"> The cataclysmic conclusion to the Total War: WARHAMMER trilogy is here.
-         Rally your forces and step into the Realm of Chaos, a dimension of
-        mind-bending horror where the very fate of the world will be decided.
-        Will you conquer your Daemons… or command them?
-        </div>
-        <button><a href="form.php">Buy</a></button>
+    <button><a href="form.php">Buy</a></button>
         
 </body>
 </html>

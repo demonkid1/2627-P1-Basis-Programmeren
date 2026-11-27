@@ -1,3 +1,11 @@
+<?php
+include "includes/db.php";
+// Haal alle producten uit de database
+$producten = $pdo->query("SELECT * FROM producten")->fetchAll();
+?>
+
+<?php include "includes/header.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +16,7 @@
 </head>
 <body>
     
-     <header><h1>RTS games</h1></header>
+    
     
     <p class="divider"></p>
     <form class="moveForm">
